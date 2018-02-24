@@ -24,46 +24,12 @@ class GameViewController < UIViewController
   end
 
   def present_scene_zero
-    @scene_zero = SceneZero.sceneWithSize(sk_view.frame.size)
+    @scene_zero = SceneDVD.sceneWithSize(sk_view.frame.size)
     @scene_zero.root = self
     sk_view.presentScene @scene_zero
   end
 
-  def present_scene_one
-    @scene_one = SceneOne.sceneWithSize(sk_view.frame.size)
-    @scene_one.root = self
-    sk_view.presentScene @scene_one
-  end
 
-  def present_scene_two
-    @scene_two = SceneTwo.sceneWithSize(sk_view.frame.size)
-    @scene_two.root = self
-    sk_view.presentScene @scene_two
-  end
-
-  def present_scene_three
-    @scene_three = SceneThree.sceneWithSize(sk_view.frame.size)
-    @scene_three.root = self
-    sk_view.presentScene @scene_three
-  end
-
-  def present_scene_four
-    @scene_four = SceneFour.sceneWithSize(sk_view.frame.size)
-    @scene_four.root = self
-    sk_view.presentScene @scene_four
-  end
-
-  def present_scene_five
-    @scene_five = SceneFive.sceneWithSize(sk_view.frame.size)
-    @scene_five.root = self
-    sk_view.presentScene @scene_five
-  end
-
-  def present_scene_six
-    @scene_five = SceneSix.sceneWithSize(sk_view.frame.size)
-    @scene_five.root = self
-    sk_view.presentScene @scene_five
-  end
 
   def sk_view
     @sk_view ||= SKView.alloc.initWithFrame screen_rect
